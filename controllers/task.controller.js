@@ -27,8 +27,8 @@ async function getTasks(req, res) {
 			count: tasks.length,
 			message: "Tasks Fetched Successfully",
 		});
-	} catch (err) {
-		res.status(500).send({ error: err });
+	} catch (error) {
+		res.status(500).send({ error: error });
 	}
 }
 
@@ -45,7 +45,7 @@ async function getSingleTask(req, res) {
 		}
 		res.status(200).json({ task, message: "Task Fetched successfully" });
 	} catch (error) {
-		res.status(500).send({ error: err });
+		res.status(500).send({ error: error });
 	}
 }
 
@@ -80,8 +80,8 @@ async function updateTask(req, res) {
 		res.json({
 			message: "Task Updated Successfully",
 		});
-	} catch (err) {
-		res.status(500).send({ error: err });
+	} catch (error) {
+		res.status(500).send({ error: error });
 	}
 }
 
@@ -98,7 +98,7 @@ async function deleteTask(req, res) {
 		}
 		res.status(200).json({ task, message: "Task Deleted successfully" });
 	} catch (error) {
-		res.status(500).send({ error: err });
+		res.status(500).send({ error: error });
 	}
 }
 module.exports = {
